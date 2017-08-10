@@ -1,0 +1,19 @@
+{
+  "name": "mario-android-sdk",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maybewaityou/mario-android-sdk.git"
+  },
+  "author": "MeePwn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maybewaityou/mario-android-sdk/issues"
+  },
+  "homepage": "https://github.com/maybewaityou/mario-android-sdk#readme"
+}
