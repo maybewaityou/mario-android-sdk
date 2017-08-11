@@ -12,8 +12,6 @@ import com.mario_android_sdk.vendors.http.events.NetworkEvent;
 
 import org.greenrobot.eventbus.EventBus;
 
-import io.reactivex.schedulers.Schedulers;
-
 /**
  * Created by MeePwn on 2017/8/11.
  */
@@ -38,8 +36,7 @@ public class NetworkJob extends Job {
     @Override
     public void onRun() throws Throwable {
         NetworkUtility
-                .asyncObserve(mUrl, mParamsString)
-                .subscribeOn(Schedulers.io())
+                .asyncFlow(mUrl, mParamsString)
                 .subscribe(response -> EventBus.getDefault().post(new NetworkEvent(mUrl, Constant.INSTANCE.getRESPONSE_SUCCESS(), (String) response)),
                         error -> EventBus.getDefault().post(new NetworkEvent(mUrl, Constant.INSTANCE.getRESPONSE_FAILURE(), (String) error)));
     }
