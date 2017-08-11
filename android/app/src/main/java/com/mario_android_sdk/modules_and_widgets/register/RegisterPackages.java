@@ -15,6 +15,7 @@ import java.util.List;
  */
 
 public class RegisterPackages implements ReactPackage {
+
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         FrameworkApplication.setReactApplicationContext(reactContext);

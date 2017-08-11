@@ -3,6 +3,7 @@ package com.mario_android_sdk.modules_and_widgets.register;
 import com.facebook.react.animated.NativeAnimatedModule;
 import com.facebook.react.bridge.ModuleSpec;
 import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.modules.accessibilityinfo.AccessibilityInfoModule;
 import com.facebook.react.modules.appstate.AppStateModule;
 import com.facebook.react.modules.camera.CameraRollManager;
 import com.facebook.react.modules.camera.ImageEditingManager;
@@ -39,6 +40,7 @@ public class RNMainReactPackage extends MainReactPackage {
     @Override
     public List<ModuleSpec> getNativeModules(ReactApplicationContext context) {
         return Arrays.asList(
+                new ModuleSpec(AccessibilityInfoModule.class, () -> new AccessibilityInfoModule(context)),
                 new ModuleSpec(AppStateModule.class, () -> new AppStateModule(context)),
                 new ModuleSpec(AsyncStorageModule.class, () -> new AsyncStorageModule(context)),
                 new ModuleSpec(CameraRollManager.class, () -> new CameraRollManager(context)),
