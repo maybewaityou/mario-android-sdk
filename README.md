@@ -25,6 +25,31 @@ In app module's build.gradle, add:
 compile project(":mario-android-sdk")
 ```
 
+###How to use
+At MainApplication.java
+
+```
+@Override
+protected List<ReactPackage> getPackages() {
+    return Arrays.<ReactPackage>asList(
+-            new MainReactPackage()
++            new MainReactPackage(),
++            new RegisterPackages()
+    );
+}
+```
+
+and
+
+```
+@Override
+public void onCreate() {
+    super.onCreate();
+
+    FrameworkApplication.init(this);
+}
+```
+
 so, you can use mario-android-sdk.
 
 Happy hacking : )
