@@ -71,8 +71,11 @@ public class NetworkUtility {
     /**
      * 网络请求: Rx形式
      */
-    public static Observable asyncObserve(String url, String paramsString) {
-        return Observable.create(emitter -> asyncRequest(url, paramsString, emitter::onNext, emitter::onError));
+    public static Flowable asyncFlow(String url, String paramsString) {
+        return Flowable
+                .create(emitter -> asyncRequest(url, paramsString, emitter::onNext, emitter::onError), BackpressureStrategy.BUFFER)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
     }
 
     /**
