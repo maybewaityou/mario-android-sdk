@@ -39,6 +39,7 @@ dependencies {
 //    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'
 
     compile "io.reactivex.rxjava2:rxjava:$latest_version"
+    compile "io.reactivex.rxjava2:rxandroid:$latest_version"
     compile "org.greenrobot:eventbus:$latest_version"
     compile "com.birbit:android-priority-jobqueue:$latest_version"
     compile "com.android.volley:volley:$latest_version"
