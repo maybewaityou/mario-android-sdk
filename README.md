@@ -13,7 +13,6 @@ npm install --save mario-android-sdk
 In the settings.gradle, add:
 
 ```
-
 - include ':app'
 + include ':app', ':mario-android-sdk'
 
