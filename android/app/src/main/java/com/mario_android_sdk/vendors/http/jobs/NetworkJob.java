@@ -16,7 +16,6 @@ import org.greenrobot.eventbus.EventBus;
  * Created by MeePwn on 2017/8/11.
  */
 
-@SuppressWarnings("unchecked")
 public class NetworkJob extends Job {
 
     private String mUrl;
@@ -35,6 +34,7 @@ public class NetworkJob extends Job {
 
     @Override
     public void onRun() throws Throwable {
+        //noinspection unchecked
         NetworkUtility
                 .asyncFlow(mUrl, mParamsString)
                 .subscribe(response -> EventBus.getDefault().post(new NetworkEvent(mUrl, Constant.INSTANCE.getRESPONSE_SUCCESS(), (String) response)),
