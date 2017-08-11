@@ -1,6 +1,13 @@
 ##mario-android-sdk
 >mario is used in react native project.
 
+###installation
+```
+yarn add mario-android-sdk
+or
+npm install --save mario-android-sdk
+```
+
 ###How to config
 
 In the settings.gradle, add:
