@@ -21,6 +21,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -37,6 +41,7 @@ dependencies {
     compile "io.reactivex.rxjava2:rxjava:$latest_version"
     compile "org.greenrobot:eventbus:$latest_version"
     compile "com.birbit:android-priority-jobqueue:$latest_version"
+    compile "com.android.volley:volley:$latest_version"
     compile "com.orhanobut:logger:$latest_version"
     compile "com.squareup:tape:$latest_version"
     compile "com.squareup.phrase:phrase:$latest_version"
