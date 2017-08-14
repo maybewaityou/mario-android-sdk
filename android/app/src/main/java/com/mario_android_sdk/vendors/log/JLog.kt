@@ -39,7 +39,7 @@ object JLog {
     }
 
     fun e(message: String, vararg args: Any) {
-        if (Constant.IS_DEBUG) Logger.e(Throwable(), message, *args)
+        if (Constant.IS_DEBUG) Logger.e(message, *args)
     }
 
     fun e(throwable: Throwable, message: String, vararg args: Any) {
@@ -64,7 +64,7 @@ object JLog {
 
     /**
      * Formats the json content and print it
-
+     *
      * @param json the json content
      */
     fun json(json: String) {
@@ -73,7 +73,7 @@ object JLog {
 
     /**
      * Formats the json content and print it
-
+     *
      * @param xml the xml content
      */
     fun xml(xml: String) {
