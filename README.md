@@ -53,3 +53,17 @@ public void onCreate() {
 so, you can use mario-android-sdk.
 
 Happy hacking : )
+
+### Native Modules
+##### LogModule:
+
+```
+LogModule.d(info);
+LogModule.i(info);
+LogModule.v(info);
+LogModule.w(info);
+LogModule.e(info);
+LogModule.wtf(info);
+LogModule.json(jsonString);
+LogModule.xml(xmlString);
+```
